@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<link rel="shortcut icon" href="images/puerto.ico" />
+<title>Feedback Form</title>
+<link rel="stylesheet" type="text/css" href ="styles/feedback.css">
+<link rel="stylesheet" type="text/css" href ="styles/srijan.css">
+</head>
+<body>
+
+<div class="topnav">
+  <a href="main_page.html">Home</a>
+  <a class="active" href="feedback.html">Feedback</a>
+  <a href="about.html">About</a>
+  <a href="player.html">Player Details</a>
+  
+</div>
+
+<div class="container" style="padding-left:500px">
+  <form >
+
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <br>
+   
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <br>
+
+    <select id="country" name="country">
+      <option value="finland">Finland</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+	<br>
+
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  </form>
+</div>
+<div class="container" style="padding-left:550px">
+<button class="button button5" onclick="myFunction()" >Send</button>
+</div>
+<div id="snackbar">Thanks for the feedback</div>
+<script>
+function myFunction() {
+    var x = document.getElementById("snackbar")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+</body>
+
+</html>
